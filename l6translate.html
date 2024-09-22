@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Translate Function</title>
+	<style type="text/css">
+		img{
+			width: 300px;
+			display: block;
+		/*	margin: auto; can work only in block elements
+			So,we changed display to block*/
+
+			margin: auto;	/*here,auto make center in hr*/
+			margin-top: 200px;
+		}
+
+		/*Starting point from left point while moving*/
+
+		/*Right*/
+		/*img:hover{
+			transform: translateX(100px);
+		}*/
+
+		/*Left*/
+		/*img:hover{
+			transform: translateX(-100px);
+		}*/
+
+		/*Down*/
+		/*img{
+			transform: translateY(100px);
+		}*/
+
+		/*Up*/
+		/*img{
+			transform: translateY(-100px);
+		}*/
+
+		/*Unit can give with percent*/
+		/*img:hover{
+			transform: translate(-100%);
+		}*/
+
+		/*img:hover{
+			transform: translate(-100px) translateY(100px);
+		}*/
+
+		img:hover{				/*(	x   ,   y)*/
+			transform: translate(100px,-100px);
+		}
+	</style>
+</head>
+<body>
+	<img src="img/dog.jpg" alt="dog"/> 
+</body>
+</html>

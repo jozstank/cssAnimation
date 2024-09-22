@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Button Effect</title>
+	<style type="text/css">
+		body{	
+			font-family: time new romance;
+			/*view port height*/
+			height: 100vh;
+
+			/*justify-content and align-items can work without display: flex*/
+			display: flex;
+			justify-content: center;	/*(horizontal)*/
+			align-items: center;		/*vertical*/
+
+			/*Here are to do (can not do scroll)*/
+			margin: 0;	/*(If we write letters It can scroll)*/
+			overflow: hidden;/*	(If we write letter.It cannot scroll)*/
+
+			
+		}
+
+		a{
+			text-decoration: none;
+			color: black;
+			font-size: 45px;
+			border: 5px solid black;
+					/*top & bottom left & right*/
+			padding: 40px 80px;
+
+			position: relative;
+
+			overflow: hidden;
+		}
+		/*  pseudo class (:)*/
+		/*pseudo element (::)*/
+
+		/*a::before{
+			content: "Hey";
+		}
+
+		a::after{
+			content: "Bye";
+		}*/
+
+		a::before{
+			content: "";	/*(must contain in pseudo elements)*/
+
+			width: 100%;
+			height: 100%;
+
+			background-color: yellow;
+
+			position: absolute;/* (to change float layer and to use top: bottom: left: right: )*/
+			top: 0;
+			left: 0;
+
+			/*default value of element 0*/
+			z-index: -1;
+
+			/*transform: rotate(90deg);
+			transform-origin: right top;*/
+
+
+			/*transform: rotate(-90deg);
+			transform-origin: left bottom;*/
+
+
+			transform: rotate(90deg);
+			transform-origin: left top;
+
+			transition: transform 1s;
+
+
+		}
+
+		a:hover::before{
+			transform: rotate(0deg);
+		}
+	</style>
+</head>
+<body>
+	<a href="#">Hover Me</a>
+</body>
+</html>
